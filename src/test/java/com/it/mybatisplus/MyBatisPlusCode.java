@@ -27,7 +27,7 @@ public class MyBatisPlusCode {
         String projectPath = System.getProperty("user.dir"); //用户的当前工作目录
         gc.setOutputDir(projectPath+"/src/main/java");
         gc.setAuthor("gxp");
-        gc.setOpen(false);
+        gc.setOpen(false); //是否打开输出目录
         gc.setFileOverride(false); // 是否覆盖
         gc.setServiceName("%sService"); // 去Service的I前缀
         gc.setIdType(IdType.ID_WORKER);
@@ -60,7 +60,7 @@ public class MyBatisPlusCode {
         strategy.setNaming(NamingStrategy.underline_to_camel);
         strategy.setColumnNaming(NamingStrategy.underline_to_camel);
         strategy.setEntityLombokModel(true); // 自动lombok；
-        strategy.setLogicDeleteFieldName("deleted");
+        strategy.setLogicDeleteFieldName("deleted"); //逻辑删除
         // 自动填充配置
         TableFill gmtCreate=new TableFill("gmt_create", FieldFill.INSERT);
         TableFill gmtModified = new TableFill("gmt_modified", FieldFill.INSERT_UPDATE);
